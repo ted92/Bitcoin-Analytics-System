@@ -2,14 +2,14 @@
 Dataframe D:[0m
 
 Evaluation in between:
-[1m[92m21-02-2017 18:46:40
+[1m[92m24-03-2016 04:00:19
 13-11-2017 00:18:09
 
 [0mTransaction evaluated:
-[1m[92m98923[0m
+[1m[92m162053[0m
 
 Blocks evaluated:
-[1m[92m50[0m
+[1m[92m100[0m
 
 jump J:[1m[92m
 10000
