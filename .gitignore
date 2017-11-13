@@ -1,0 +1,14 @@
+# Compiled source #
+###################
+*.com
+*.class
+*.exe
+*.dll
+*.o
+*.so
+*.pyc
+
+# Subfolders #
+##############
+/BAS/src/*.pyc
+/BAS/dataframe/*.txt
