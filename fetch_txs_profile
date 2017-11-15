@@ -1,0 +1,20 @@
+Timer unit: 1e-06 s
+Total time: 85.4585 s
+File: retrieval.py
+Function: fetch_txs at line 87
+
+Line #		% Time  Line Contents
+==============================================================
+87				@profile
+88				def fetch_txs(jump):
+93			0.0      blocks_to_retrieve = 10
+95			0.0      if os.path.isfile(temporary_blocks):
+96			0.0          os.remove(temporary_blocks)
+99			0.0      if os.path.isfile(temporary_transactions):
+100			0.0          os.remove(temporary_transactions)                                  
+117			0.8          df = pd.DataFrame.from_csv(dataframe, sep='\t')
+118			0.0          height_list = df['B_he'].values
+122			11.4         b_array = get_json_request("https://blockchain.info/block-height/" + str(last_block) + "?format=json")
+123			0.0          blocks = b_array['blocks']
+125			0.0          block_hash = b['hash']
+126			87.7         get_blockchain(blocks_to_retrieve, block_hash)

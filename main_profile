@@ -1,0 +1,18 @@
+Timer unit: 1e-06 s
+Total time: 103.534 s
+File: main.py
+Function: main at line 99
+
+Line #		% Time  Line Contents
+==============================================================
+99						@profile
+100						def main(argv):
+111			0.0          opts, args = getopt.getopt(argv, "hipt:d:")
+112			0.0          valid_args = False         
+114			0.0          for opt, arg in opts:
+124			0.0              if opt == "-d":
+126			85.5                  jump = basretrieve.fetch_txs(int(arg))
+128			13.8                  basretrieve.read_txs_file()
+129			0.0                  if os.path.isfile(info_file):
+130			0.0                      os.remove(info_file)
+131			0.7                  print basmanipulation.get_dataframe_info(jump)

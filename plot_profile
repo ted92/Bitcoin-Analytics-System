@@ -1,0 +1,23 @@
+Timer unit: 1e-06 s
+Total time: 328.466 s
+File: plotting.py
+Function: plot at line 96
+
+Line #		% Time  Line Contents
+==============================================================
+96					@profile
+97					def plot():
+98			0.2      df = basmanipulation.get_dataframe()
+101			1.3      plot_reward_fee(df, axes)
+105			1.3      plot_profit_multiple_miners(df, axes)
+109			3.3      plot_profit_creation_time(df, axes)
+113			6.2      plot_total_btc(df, axes)
+117			7.4      plot_fee_input_miners(df, axes)
+121			1.5      plot_fee_latency(df, axes)
+133			8.3      plot_fee_latency_years(df, axes)
+137			12.8	 plot_blocksize_latency(df, axes)
+141			24.6     plot_throughput(df, axes)
+145			1.0      plot_creation_time_miners(df, axes)
+149			11.5     plot_block_size(df, axes)
+157			10.7     plot_trendy_miners(df, axes)
+161			9.3      plot_number_of_miners(df, axes)

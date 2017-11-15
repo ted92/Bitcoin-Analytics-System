@@ -93,7 +93,7 @@ def initialize_plt():
     axes.yaxis.set_ticks_position('left')
     return axes
 
-
+@profile
 def plot():
     df = basmanipulation.get_dataframe()
     axes = initialize_plt()
@@ -120,9 +120,9 @@ def plot():
     print plot_fee_latency.__doc__
     plot_fee_latency(df, axes)
 
-    axes = initialize_plt()
-    print plot_txs_fee_distribution.__doc__
-    plot_txs_fee_distribution(df, axes)
+    # axes = initialize_plt()
+    # print plot_txs_fee_distribution.__doc__
+    # plot_txs_fee_distribution(df, axes)
 
     # axes = initialize_plt()
     # print plot_txs_feedensity_distribution.__doc__
@@ -278,7 +278,7 @@ def plot_profit_multiple_miners(df, axes):
     new_df = new_df.groupby('B_T').median().reset_index()
     del new_df['B_ep']
     del new_df['btc_price']
-    del new_df['hashing_rate']
+    # del new_df['hashing_rate']
     del new_df['t_f']
 
     profit_array = []

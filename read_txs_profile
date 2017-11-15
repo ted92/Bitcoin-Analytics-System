@@ -1,0 +1,47 @@
+Timer unit: 1e-06 s
+Total time: 13.5002 s
+File: retrieval.py
+Function: read_txs_file at line 286
+
+Line #		% Time  Line Contents
+==============================================================
+286					@profile
+287					def read_txs_file():
+301			0.0      if os.path.isfile(temporary_transactions):
+302			0.0          with io.FileIO(temporary_transactions, "r") as file:
+303			0.0              file.seek(0)
+304			0.1              txs = file.read() # operations on txs are the most expensive ones
+306			0.1          list_txs = txs.split("\n")
+307			0.0          list_txs.pop()
+317			0.0          for el in list_txs:
+318			0.0              epoch_list.append(list_txs[i + 1])
+319			0.0              list_txs.remove(list_txs[i + 1])
+327			0.0          for t in list_txs:
+328			75.5              list_txs[i] = ast.literal_eval(t) # parse json transactions
+335			0.0          for i in range(len(epoch_list)):
+342                                                       temp_input, temp_output, temp_fee_list, temp_size_list, temp_approval_time_list, temp_hash_tx = \
+343			4.2                  calculate_transactions_fee(list_txs[i], int(epoch_list[i]))
+352			0.0          f_percentile = []
+353			0.1          for f_in, f_ou in zip(input, output):
+354			0.1              if float(f_in)!= 0:
+355			0.2                  percentile = 100 - (float(f_ou * 100) / float(f_in))
+356			0.1			else:
+358			0.1              f_percentile.append(percentile)
+389			0.1          for tx in input:
+390			0.1              if i < indexes_list[counter]:
+391			0.1                  b_s.append(block_size[counter])
+392			0.1                  b_ct.append(block_creation_time[counter])
+393			0.1                  b_h.append(block_height[counter])
+394			0.1                  b_ep.append(block_epoch[counter])
+395			0.1                  b_t.append(block_txs[counter])
+396			0.1                  b_hash.append(block_hash[counter])
+397			0.1                  b_rel.append(block_relayedby[counter])
+398			0.1                  i += 1
+410			0.0          if os.path.isfile(dataframe):
+413			6.3              old_df = pd.DataFrame.from_csv(dataframe, sep='\t') # get data frame
+416			0.0              new_df = pd.DataFrame.from_items(
+417			0.0                  [('t_ha', hash_tx), ('t_in', input), ('t_ou', output), ('t_f', fee_list), ('t_q', size_list),
+418			0.0                   ('t_%', f_percentile), ('t_l', approval_time_list),
+419			0.0                   ('Q', b_s), ('B_T', b_ct), ('B_he', b_h), ('B_ep', b_ep), ('B_t', b_t),
+420			0.1                   ('B_h', b_hash), ('B_mi', b_rel)])   423         1        46862  46862.0      0.3              new_df = pd.concat([old_df, new_df]) 
+433			8.9          new_df.to_csv(dataframe, sep='\t')

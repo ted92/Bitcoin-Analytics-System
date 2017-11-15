@@ -56,21 +56,21 @@ python main.py -p
 Note: to have a nice plotting is suggested to have downloaded at least few months of activity in the blockchain
 
 ```
-reward_fee.png				: (date, BTC) plot the revenue from the block reward R compared to the fee from users M
+reward_fee.png					: (date, BTC) plot the revenue from the block reward R compared to the fee from users M
 profit_multiple_miners.png		: (creation time, profit) plot the profit using AntMinerS9 having 1, 50, 100, 500 miners in the mining pool.
 profit_creation_time.png		: (creation time, profit) plot the revenue, costs and profit for miners according the creation time
-total_btc.png				: (date, BTC) total bitcoin in circulation
+total_btc.png					: (date, BTC) total bitcoin in circulation
 fee_input_miners.png			: (miners, fee%) comparison between the percentage of fee paid by the 20 biggest mining pools
-fee_latency.png				: (fee, latency) plot the transaction fee in relation with the fee latency
+fee_latency.png					: (fee, latency) plot the transaction fee in relation with the fee latency
 txs_fee_distribution.png		: (date, %) plot the transaction fee distribution, divided in category
-txs_feedensity_distribution.png		: (date, %) plot the transaction fee density distribution, divided in category
+txs_feedensity_distribution.png	: (date, %) plot the transaction fee density distribution, divided in category
 fee_latency_years.png			: (fee, latency) plot the relation between the transaction fee and the latency, distributed during years
 blocksize_latency.png			: (block size, latency) plot the block size Q in relation with the transaction latency
-throughput.png				: (date, throughput) plot throughput during time
+throughput.png					: (date, throughput) plot throughput during time
 creation_time_miners.png		: (creation time, blocks mined) bar plot of occasional miners and mining pools about the creation time
-block_size.png				: (date, block size) plot the block size during time
+block_size.png					: (date, block size) plot the block size during time
 top_miners_monthly.png			: (date, blocks) plot the occasional miners and the mining pools every months according to how many blocks they mine
-trendy_miners.png			: (date, transactions) plot the transactions approved by the 15 major miners during the years
+trendy_miners.png				: (date, transactions) plot the transactions approved by the 15 major miners during the years
 number_of_miners.png			: (date, miners) plot the number of active miners in the network
 ```
 
