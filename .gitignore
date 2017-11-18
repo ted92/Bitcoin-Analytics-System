@@ -12,3 +12,4 @@
 ##############
 /BAS/src/*.pyc
 /BAS/dataframe/*.txt
+/BAS/dataframe/*.tsv
