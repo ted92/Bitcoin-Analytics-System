@@ -93,7 +93,7 @@ def initialize_plt():
     axes.yaxis.set_ticks_position('left')
     return axes
 
-@profile
+
 def plot():
     df = basmanipulation.get_dataframe()
     axes = initialize_plt()
