@@ -49,9 +49,10 @@ use -d command for retrieval and set an initial jump J = 10
 ```
 python main.py -d 10
 ```
-Note: this jump will remain of 10 even if in the later analysis the variable is changed
+Note: jump J keeps its value during the further tests if D is already created. However, in this version of the system is necessary to inster that parameter anyway.
 
-once D is created data can be plotted
+If D is generated, data can be plotted.
+
 ```
 python main.py -p
 ```
